@@ -193,12 +193,12 @@
           width: '6'
         },
       ];
-      let form_item = '';
-      let option, option_item, checkbox_e;
+      let form_item = document.getElementById('form_item');
+      let form_item_html = '';
+
       for (let i in stru) {
         if (stru[i]['type'] === 'text') { //簡答
-          form_item += `
-            <!-- input text 文字方塊(單行) -->
+          form_item_html = `
             <div class="col-sm-${stru[i]['width']} mb-3">
               <label for="${stru[i]['name']}" class="form-label">${stru[i]['label']}</label>
               <input type="${stru[i]['type']}" name="${stru[i]['name']}" value="${stru[i]['value']}" class="form-control" id="${stru[i]['name']}" ${stru[i]['valid']}>
